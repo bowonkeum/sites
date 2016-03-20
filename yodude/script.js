@@ -11,27 +11,13 @@ $("div").hover(function () {
 });
 
 //click
-// $("div").click(function () {
-// 	$(this).css({
-// 		transform: 'skew(' + randoNum + 'deg,' + randoNum2 + 'deg)'
-// 	})
-// });
-
-//click
 $("div").click(function () {
 
-	var randoNum = Math.floor(Math.random() * 1000);
-	var randoNum2 = Math.floor(Math.random()* 10);
+	var randoSkewX = Math.floor(Math.random() * 100);
+	var randoSkewY = Math.floor(Math.random() * 5);
+	var randoScale = Math.floor(Math.random()* 10);
 
-	$(this).css("transform", 'scale(' + randoNum2 + ') ' + 'skewX(' + randoNum + 'deg)');
+	$(this).css("transform", 'scale(' + randoScale + ') ' + 'skew(' + randoSkewX + 'deg,' + randoSkewY + 'deg)');
 
-
-// $(this).css({
-// 		transform: 'skew(' + randoNum + 'deg)'
-// 	})
-
-// 			transform: 'scale(' + randoNum2 + ')'
-
-	console.log(randoNum);
-	console.log(randoNum2);
+	console.log(randoSkewX + " " + randoSkewY + " " + randoScale);
 });
